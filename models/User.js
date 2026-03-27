@@ -1,9 +1,9 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
     name:{
         type:String,
-        required: true,
+        required:true,
         trim:true,
     },
     email:{
@@ -17,8 +17,8 @@ const userSchema = new mongoose.Schema({
     },
     role:{
         type:String,
-        enum:["Admin", "Student", "Visitor"]//enum : sirf yahi 3 value le sakta hai, uske alava koi aur nahi le sakta hai
+        enum:["Admin", "Student", "Visitor"]
     }
-})
+});
 
 module.exports = mongoose.model("user", userSchema);
